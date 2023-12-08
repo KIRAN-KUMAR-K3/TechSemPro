@@ -1,38 +1,36 @@
 # TechSemPro
 
-<p align="center">
-  <img src="your-logo.png" alt="TechSemPro Logo" width="200">
-</p>
-
-Welcome to TechSemPro - Your Smart SGPA Calculator for VTU Engineering Students!
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
-
-## Overview
-
-TechSemPro is a powerful SGPA calculator crafted for engineering students under the VTU syllabus. Streamlining the complexities of grading, it offers precision and ease in assessing your academic performance.
+TechSemPro is an efficient SGPA calculator tailored for engineering students under the VTU syllabus. Simplify your semester grading with precision and speed, ensuring accurate grade point averages effortlessly. Make academic assessment seamless with TechSemPro.
 
 ## Features
 
-- **VTU Specialization:** Tailored exclusively for the VTU syllabus to ensure accurate grade calculations.
-- **Effortless Grading:** Simplify complex grading with an intuitive interface for quick and precise results.
-- **Tech-Driven:** Leverage cutting-edge technology to optimize your academic assessment process.
+- Calculate SGPA (Semester Grade Point Average) for engineering students under the VTU syllabus.
+- Provides precision and speed in calculating grades.
+- Ensures accurate grade point averages effortlessly.
+- Simplifies semester grading for students.
+- Helps in making academic assessment seamless.
 
-## How to Use
+## Installation
 
-1. **Clone the Repository:**
-   ```bash
+To use TechSemPro, follow these steps:
+
+1. Clone the repository:
+
+   ````bash
    git clone https://github.com/KIRAN-KUMAR-K3/TechSemPro.git
-Navigate to TechSemPro:
+   ```
 
-bash
-Copy code
-cd TechSemPro
-Run the Application:
+2. Open the TechSemPro directory.
 
-bash
-Copy code
-# Add specific instructions to run your application
-Input Your Grades:
-Follow on-screen prompts to input your semester grades and let TechSemPro calculate your SGPA effortlessly!
+3. Run the application.
 
+## Usage
+
+1. Enter the required details such as subject codes, credits, and grades.
+
+2. Click on the "Calculate" button to get the SGPA.
+
+3. View the calculated SGPA on the screen.
+
+
+*Note: This README is generated for the repository [TechSemPro](https://github.com/KIRAN-KUMAR-K3/TechSemPro.git).*
