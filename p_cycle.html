@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Cycle</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="boostrap/css/font.css">
+    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
+    <link rel="stylesheet" href="boostrap/css/mdb.css">
+    <link rel="stylesheet" href="boostrap/css/style.css">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #subject {
+            text-transform: uppercase;
+            font-family: Rockwell;
+            color: red;
+        }
+
+        .card {
+            border-radius: 20px;
+        }
+
+        .form-control {
+            margin-top: 20px;
+        }
+
+        #result {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center mt-5" id="subject">Physics Cycle</h1>
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-body">
+                <form action="">
+                    <input class="form-control form-control" type="text" placeholder="21MAT11" id="MAT11">
+                    <input class="form-control form-control" type="text" placeholder="21PHY12/22" id="PHY12">
+                    <input class="form-control form-control" type="text" placeholder="21ELE13/23" id="ELE13">
+                    <input class="form-control form-control" type="text" placeholder="21CIV14/24" id="CIV14">
+                    <input class="form-control form-control" type="text" placeholder="21EVN15/25" id="EVN15">
+                    <input class="form-control form-control" type="text" placeholder="21PHYL16/26" id="PHYL16">
+                    <input class="form-control form-control" type="text" placeholder="21ELE17/27" id="ELE17">
+                    <input class="form-control form-control" type="text" placeholder="21EGH18" id="EGH18">
+                    <input class="form-control form-control" type="text" placeholder="21IDT19/29" id="IDT19">
+                    <div class="text-center mt-3">
+                        <button class="btn btn-sm btn-warning text-dark " value="reset">Reset</button>
+                        <button type="button" class="btn btn-sm btn-success text-dark"
+                            onclick="calculateSGPA()">Calculate</button>
+                    </div>
+                </form>
+                <div id="result" class="text-center mt-3">SGPA :</div>
+            </div>
+        </div>
+    </div>
+    <script src="boostrap/js/jquery.js"></script>
+    <script src="boostrap/js/popper.js"></script>
+    <script src="boostrap/js/bootstrap.js"></script>
+    <script src="boostrap/js/mdb.js"></script>
+    <script>
+        function marksAndCredits(marks, credits) {
+            if (marks <= 100 && marks >= 90) {
+                return 10 * credits;
+            } else if (marks >= 80 && marks < 90) {
+                return 9 * credits;
+            } else if (marks >= 70 && marks < 80) {
+                return 8 * credits;
+            } else if (marks >= 60 && marks < 70) {
+                return 7 * credits;
+            } else if (marks >= 55 && marks < 60) {
+                return 6 * credits;
+            } else if (marks >= 50 && marks < 55) {
+                return 5 * credits;
+            } else if (marks >= 40 && marks < 50) {
+                return 4 * credits;
+            } else if (marks >= 0 && marks < 40) {
+                console.log("fail");
+            }
+        }
+        function calculateSGPA() {
+            const MAT11 = parseInt(document.getElementById("MAT11").value);
+            const sub1 = marksAndCredits(MAT11, 3);
+
+            const PHY12 = parseInt(document.getElementById("PHY12").value);
+            const sub2 = marksAndCredits(PHY12, 3);
+
+            const ELE13 = parseInt(document.getElementById("ELE13").value);
+            const sub3 = marksAndCredits(ELE13, 3);
+
+            const CIV14 = parseInt(document.getElementById("CIV14").value);
+            const sub4 = marksAndCredits(CIV14, 3);
+
+            const EVN15 = parseInt(document.getElementById("EVN15").value);
+            const sub5 = marksAndCredits(EVN15, 3);
+
+            const PHYL16 = parseInt(document.getElementById("PHYL16").value);
+            const sub6 = marksAndCredits(PHYL16, 1);
+
+            const ELE17 = parseInt(document.getElementById("ELE17").value);
+            const sub7 = marksAndCredits(ELE17, 1);
+
+            const EGH18 = parseInt(document.getElementById("EGH18").value);
+            const sub8 = marksAndCredits(EGH18, 2);
+
+            const IDT19 = parseInt(document.getElementById("IDT19").value);
+            const sub9 = marksAndCredits(IDT19, 1);
+
+            const total_sgpa = (sub1 + sub2 + sub3 + sub4 + sub5 + sub6 + sub7 + sub8 + sub9) / 20;
+
+            document.getElementById("result").innerHTML = "SGPA: " + total_sgpa.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

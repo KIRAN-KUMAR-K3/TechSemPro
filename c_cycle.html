@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Cycle</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="boostrap/css/font.css">
+    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
+    <link rel="stylesheet" href="boostrap/css/mdb.css">
+    <link rel="stylesheet" href="boostrap/css/style.css">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #subject {
+            text-transform: uppercase;
+            font-family: Rockwell;
+            color: red;
+        }
+
+        .card {
+            border-radius: 20px;
+        }
+
+        .form-control {
+            margin-top: 20px;
+        }
+
+        #result {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center mt-5" id="subject">Chemistry Cycle</h1>
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-body">
+                <form action="">
+                    <input class="form-control form-control" type="text" placeholder="21MAT21" id="MAT21">
+                    <input class="form-control form-control" type="text" placeholder="21CHE12/22 " id="CHE22">
+                    <input class="form-control form-control" type="text" placeholder="21PSP23/13" id="PSP23">
+                    <input class="form-control form-control" type="text" placeholder="21ELN14/24 " id="ELN24">
+                    <input class="form-control form-control" type="text" placeholder="21EME15/25" id="EME25">
+                    <input class="form-control form-control" type="text" placeholder="21CHEL16/26" id="CHEL26">
+                    <input class="form-control form-control" type="text" placeholder="21CPL27/17 " id="CPL27">
+                    <input class="form-control form-control" type="text" placeholder="21EGH28" id="EGH28">
+                    <input class="form-control form-control" type="text" placeholder="21SFH29" id="SFH29">
+                    <div class="text-center mt-3">
+                        <button class="btn btn-sm btn-warning text-dark " value="reset">Reset</button>
+                        <button type="button" class="btn btn-sm btn-success text-dark"
+                            onclick="calculateSGPA()">Calculate</button>
+                    </div>
+                </form>
+                <div id="result" class="text-center mt-3">SGPA :</div>
+            </div>
+        </div>
+    </div>
+    <div class="container"></div>
+    <script src="boostrap/js/jquery.js"></script>
+    <script src="boostrap/js/popper.js"></script>
+    <script src="boostrap/js/bootstrap.js"></script>
+    <script src="boostrap/js/mdb.js"></script>
+    <script>
+        function marksAndCredits(marks, credits) {
+            if (marks <= 100 && marks >= 90) {
+                return 10 * credits;
+            } else if (marks >= 80 && marks < 90) {
+                return 9 * credits;
+            } else if (marks >= 70 && marks < 80) {
+                return 8 * credits;
+            } else if (marks >= 60 && marks < 70) {
+                return 7 * credits;
+            } else if (marks >= 55 && marks < 60) {
+                return 6 * credits;
+            } else if (marks >= 50 && marks < 55) {
+                return 5 * credits;
+            } else if (marks >= 40 && marks < 50) {
+                return 4 * credits;
+            } else if (marks >= 0 && marks < 40) {
+                console.log("fail");
+            }
+        }
+        function calculateSGPA() {
+            const MAT21 = parseInt(document.getElementById("MAT21").value);
+            const sub1 = marksAndCredits(MAT21, 3);
+
+            const CHE22 = parseInt(document.getElementById("CHE22").value);
+            const sub2 = marksAndCredits(CHE22, 3);
+
+            const PSP23 = parseInt(document.getElementById("PSP23").value);
+            const sub3 = marksAndCredits(PSP23, 3);
+
+            const ELN24 = parseInt(document.getElementById("ELN24").value);
+            const sub4 = marksAndCredits(ELN24, 3);
+
+            const EME25 = parseInt(document.getElementById("EME25").value);
+            const sub5 = marksAndCredits(EME25, 3);
+
+            const CHEL26 = parseInt(document.getElementById("CHEL26").value);
+            const sub6 = marksAndCredits(CHEL26, 1);
+
+            const CPL27 = parseInt(document.getElementById("CPL27").value);
+            const sub7 = marksAndCredits(CPL27, 1);
+
+            const EGH28 = parseInt(document.getElementById("EGH28").value);
+            const sub8 = marksAndCredits(EGH28, 2);
+
+            const SFH29 = parseInt(document.getElementById("SFH29").value);
+            const sub9 = marksAndCredits(SFH29, 1);
+
+            const total_sgpa = (sub1 + sub2 + sub3 + sub4 + sub5 + sub6 + sub7 + sub8 + sub9) / 20;
+
+            document.getElementById("result").innerHTML = "SGPA: " + total_sgpa.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

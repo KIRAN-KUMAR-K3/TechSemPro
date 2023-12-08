@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="boostrap/css/font.css">
+    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
+    <link rel="stylesheet" href="boostrap/css/mdb.css">
+    <link rel="stylesheet" href="boostrap/css/style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url("images/img5.jpg");
+        }
+
+        .header-text {
+            padding: 20px;
+            font-size: 25px;
+            color: black;
+            font-family: Rockwell;
+        }
+
+        #header {
+            background-color: deeppink;
+            height: 70px;
+        }
+
+        .alert {
+            font-size: 20px;
+        }
+
+        #calculator {
+            font-size: 60px;
+            text-transform: uppercase;
+            font-family: Lucida Handwriting;
+            text-shadow: 4px 4px 5px blue;
+        }
+
+        .card {
+            background: linear-gradient(to bottom right, blue, pink);
+            color: white;
+            height: 150px;
+        }
+
+        .card:hover {
+            height: 152px;
+        }
+
+        #subject {
+            text-transform: uppercase;
+        }
+
+        .text-success {
+            font-weight: bold;
+        }
+
+        .text-danger {
+            font-weight: bold;
+        }
+
+        .footer {
+            margin: 30px 0px 10px 0px;
+            height: 50px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" id="header">
+        <div class="header">
+            <h5 class="header-text text-bold"><i class="fa fa-calculator mr-2"></i>SGPA CALCULATOR...</h5>
+        </div>
+    </div>
+    <div class="alert alert-danger text-danger text-bold" role="alert">
+        Only for 21 Scheme syllabus
+    </div>
+    <div class="text-center mt-3 text-light" id="calculator">
+        <p>Welcome</p>
+        <p>TO</p>
+        <p>SGPA Calculator</p>
+    </div>
+    </div>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-sm-6 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="subject">Physics Cycle</h5>
+                        <p class="text-success">For All Branch</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="p_cycle.html">
+                            <div class="btn btn-sm btn-success mb-2">calculate<i class="fa fa-calculator ml-2"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="subject">Chemistry Cycle</h5>
+                        <p class="text-success">For All Branch</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="c_cycle.html">
+                            <div class="btn btn-sm btn-success mb-2">calculate<i class="fa fa-calculator ml-2"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-sm-6 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="subject">3rd semester</h5>
+                        <p class="text-success">Branch : CSE / CSD / ISE / AIML</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="third_sem.html">
+                            <div class="btn btn-sm btn-success mb-2">calculate<i class="fa fa-calculator ml-2"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="subject">4th semester</h5>
+                        <p class="text-success">Branch : CSE / CSD / ISE / AIML</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="fourth_sem.html">
+                            <div class="btn btn-sm btn-success mb-2">calculate<i class="fa fa-calculator ml-2"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-sm-6 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="subject">5th semester</h5>
+                        <p id="unavailable" class="text-danger"><i class="fas fa-info-circle"></i> Unavailable</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="btn btn-sm btn-danger mb-2">calculate<i class="fa fa-calculator ml-2"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="subject">6th semester</h5>
+                        <p id="unavailable" class="text-danger"><i class="fas fa-info-circle"></i> Unavailable</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="btn btn-sm btn-danger mb-2">calculate<i class="fa fa-calculator ml-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-sm-6 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="subject">7th semester</h5>
+                        <p id="unavailable" class="text-danger"><i class="fas fa-info-circle"></i> Unavailable</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="btn btn-sm btn-danger mb-2">calculate<i class="fa fa-calculator ml-2"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="subject">8th semester</h5>
+                        <p id="unavailable" class="text-danger"><i class="fas fa-info-circle"></i> Unavailable</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="btn btn-sm btn-danger mb-2">calculate<i class="fa fa-calculator ml-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <p id="subject">CGPA</p>
+                        <p id="unavailable" class="text-danger"><i class="fas fa-info-circle"></i> Unavailable</p>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-sm btn-danger mb-2">calculate<i
+                                class="fa fa-calculator ml-2"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="text-center text-bold py-2">Created By <a href="#" type="link">KIRAN KUMAR K</a> | <i
+                class="fab fa fa-light fa-copyright"></i> 2023 All rights reserved.</p>
+    </div>
+    <script src="boostrap/js/jquery.js"></script>
+    <script src="boostrap/js/popper.js"></script>
+    <script src="boostrap/js/bootstrap.js"></script>
+    <script src="boostrap/js/mdb.js"></script>
+</body>
+
+</html>

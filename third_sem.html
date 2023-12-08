@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rd semester</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="boostrap/css/font.css">
+    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
+    <link rel="stylesheet" href="boostrap/css/mdb.css">
+    <link rel="stylesheet" href="boostrap/css/style.css">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #subject {
+            text-transform: uppercase;
+            font-family: Rockwell;
+            color: red;
+        }
+
+        .card {
+            border-radius: 20px;
+        }
+
+        .form-control {
+            margin-top: 20px;
+        }
+
+        #result {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class=" text-center mt-4" id="subject">3rd semester</h1>
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <input class="form-control form-control " type="text" id="MAT31" placeholder="21MAT31">
+                    <input class="form-control form-control" type="text" id="CS32" placeholder="21CS32">
+                    <input class="form-control form-control" type="text" id="CS33" placeholder="21CS33">
+                    <input class="form-control form-control" type="text" id="CS34" placeholder="21CS34">
+                    <input class="form-control form-control" type="text" id="CSL35" placeholder="21CSL35">
+                    <input class="form-control form-control" type="text" id="SCR36" placeholder="21SCR36">
+                    <input class="form-control form-control" type="text" id="CIP37"
+                        placeholder="21CIP37 / 21KSK37 / 21KBK37">
+                    <input class="form-control form-control" type="text" id="CSL381" placeholder="21CSL381">
+                    <div class="text-center mt-3">
+                        <button class="btn btn-sm btn-warning text-dark " value="reset">Reset</button>
+                        <button type="button" class="btn btn-sm btn-success text-dark"
+                            onclick="calculateSGPA()">Calculate</button>
+                    </div>
+                </form>
+                <div id="result" class="text-center mt-3">SGPA :</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="boostrap/js/jquery.js"></script>
+    <script src="boostrap/js/popper.js"></script>
+    <script src="boostrap/js/bootstrap.js"></script>
+    <script src="boostrap/js/mdb.js"></script>
+    <script>
+        function marksAndCredits(marks, credits) {
+            if (marks <= 100 && marks >= 90) {
+                return 10 * credits;
+            } else if (marks >= 80 && marks < 90) {
+                return 9 * credits;
+            } else if (marks >= 70 && marks < 80) {
+                return 8 * credits;
+            } else if (marks >= 60 && marks < 70) {
+                return 7 * credits;
+            } else if (marks >= 55 && marks < 60) {
+                return 6 * credits;
+            } else if (marks >= 50 && marks < 55) {
+                return 5 * credits;
+            } else if (marks >= 40 && marks < 50) {
+                return 4 * credits;
+            } else if (marks >= 0 && marks < 40) {
+                console.log("fail");
+            }
+        }
+
+        function calculateSGPA() {
+            const MAT31 = parseInt(document.getElementById("MAT31").value);
+            const sub1 = marksAndCredits(MAT31, 3);
+
+            const CS32 = parseInt(document.getElementById("CS32").value);
+            const sub2 = marksAndCredits(CS32, 4);
+
+            const CS33 = parseInt(document.getElementById("CS33").value);
+            const sub3 = marksAndCredits(CS33, 4);
+
+            const CS34 = parseInt(document.getElementById("CS34").value);
+            const sub4 = marksAndCredits(CS34, 3);
+
+            const CSL381 = parseInt(document.getElementById("CSL381").value);
+            const sub5 = marksAndCredits(CSL381, 1);
+
+            const CSL35 = parseInt(document.getElementById("CSL35").value);
+            const sub6 = marksAndCredits(CSL35, 1);
+
+            const SCR36 = parseInt(document.getElementById("SCR36").value);
+            const sub7 = marksAndCredits(SCR36, 1);
+
+            const CIP37 = parseInt(document.getElementById("CIP37").value);
+            const sub8 = marksAndCredits(CIP37, 1);
+
+            const total_sgpa = (sub1 + sub2 + sub3 + sub4 + sub5 + sub6 + sub7 + sub8) / 18;
+
+            document.getElementById("result").innerHTML = "SGPA: " + total_sgpa.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
